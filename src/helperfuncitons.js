@@ -1,8 +1,12 @@
 
-const getRickAndMortyStuff = async() => {
-  const character = await fetch(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 300)}`);
-  return character;
+const getRickAndMortyStuff  = () => {
+//   return fetch(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 300)}`);
+  return fetch('https://rickandmortyapi.com/api/character/197')
+    .then(rest => {
+      return rest.json();
+    });
+  
 }; 
 
-export { getRickAndMortyStuff }
+export default getRickAndMortyStuff
 ;

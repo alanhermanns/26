@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './App.css';
 import MainStyle from './main.css';
 import Character from './character.js';
-import { getRickAndMortyStuff } from '../helperfuncitons.js';
 import { arrayOf } from 'prop-types';
+import Characters from './Characters';
 const Header = () => (
   <header className={styles.Header}>
     <nav>
@@ -32,7 +32,7 @@ const Footer = () => (
     </section>
   </footer>
 );
-const rMArray = Array(8).fill(getRickAndMortyStuff());
+
 const App = () => (
   <React.Fragment>
     <Header />
@@ -47,6 +47,7 @@ const App = () => (
       <Character image = 'https://placekitten.com/200/200' name = 'Big Head Morty' status = 'unknown' species = 'Human, Human with giant head' gender = 'male' origin = 'unknown' lastLocation = 'Citadel of Ricks' />
     </div>
     <Footer />
+    <Characters />
   </React.Fragment>
 );
 
